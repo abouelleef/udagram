@@ -77,7 +77,8 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                # - master
+                - main
           type: approval
           requires:
             - build
