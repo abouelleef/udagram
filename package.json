@@ -10,7 +10,7 @@
     "api:install": "cd udagram-api && npm install .",
     "api:build": "cd udagram-api && npm run build",
     "api:start": "cd udagram-api && npm run dev",
-    "api:deploy": "cd udagram-api && npm run deploy",
+    "api:deploy": "cd udagram-api && npm run deploy && eb setenv POSTGRES_DB=$POSTGRES_DB POSTGRES_USERNAME=$POSTGRES_USERNAME AWS_BUCKET=$AWS_BUCKET POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_PORT=$POSTGRES_PORT AWS_PROFILE=$AWS_PROFILE AWS_REGION=$AWS_REGION JWT_SECRET=$JWT_SECRET PORT=$PORT URL=$URL",
     "deploy": "npm run api:deploy && npm run frontend:deploy"
   }
 }
